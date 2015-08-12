@@ -72,8 +72,8 @@
 //						splice(3, 2, x, y) substitui dois elementos a partir 3ª
 //						posiçao, incluindo ele mesmo, por x e y
 
-// Challenge: escrever um algoritmo que preencha uma matriz de dias e temperaturas medias
-// por hora
+// // Challenge: escrever um algoritmo que popule uma matriz de dias e temperaturas medias
+// // por hora
 // var diasMes = 31;
 // var horasDia = 24;
 // var temperaturaMedia = [];
@@ -85,4 +85,55 @@
 // 	}
 // }
 
-// pg 94
+// /////////////////// Cria uma matriz de X por X
+// var m = [];
+// for (var i = 0; i < 3; i++) {
+// 	m[i] = [];
+// 	for (var j = 0; j < 3; j++) {
+// 		m[i][j] = [];
+// 		for (var z = 0; z < 3; z++) {
+// 			m[i][j][z] = i + j + z;
+// 		}
+// 	}
+// }
+// /////////////////// Imprime todos os valores da matriz
+// for (var i = 0; i < m.length; i++) {
+// 	for (var j = 0; j < m[i].length; j++) {
+// 		for (var z = 0; z < m[i][j].length; z++) {
+// 			console.log(m[i][j][z]);
+// 		}
+// 	}
+// }
+
+// /////////////////// Concatena varias arrays
+// var zero = 0;
+// var nPositivos = [1, 2, 3];
+// var nNegativos = [-3, -2, -1];
+// var n = nNegativos.concat(zero, nPositivos);
+
+// console.log(n); // [ -3, -2, -1, 0, 1, 2, 3 ]
+
+// /////////////////// Metodos de arrays
+var ehPar = function(x) {
+	console.log(x);
+	return (x % 2 == 0);
+}
+
+var n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+// n.every(ehPar); // 1
+// // o every() para a execuçao no primeiro 'false' que encontra
+
+// n.some(ehPar); // 1, 2
+// // .some() tem o mesmo comportamento que o every(), mas para no
+// // primeiro true
+
+// n.forEach(function(x) {
+// 	console.log(x, x % 2 == 0);
+// });
+// // forEach() passa em todos os elementos do array, independente
+// // das condiçoes
+
+var myMap = n.map(ehPar);
+
+// pg 99
