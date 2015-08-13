@@ -134,6 +134,20 @@ var n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 // // forEach() passa em todos os elementos do array, independente
 // // das condiçoes
 
-var myMap = n.map(ehPar);
+// var myMap = n.map(ehPar);
+// // map() guarda o resultado da funcao ehPar() no myMap, porem ele
+// // itera e salva todos os elementos de n, logo o novo array tera o
+// // mesmo tamanho que o array original
+// console.log(myMap);  // [false, true, false, true, false, true, ...]
 
-// pg 99
+// var numerosPares = n.filter(ehPar);
+// // filter(), ao contrario de map(), so adiciona no novo arary os
+// // elementos que validarem true na funcao ehPar
+// console.log(numerosPares); // [2, 4, 6, 8, 10, 12, 14]
+
+// var somaN = n.reduce(function(previous, current, index) {
+// 	return previous + current;
+// });
+// console.log(somaN); // 120
+
+// pg 101
