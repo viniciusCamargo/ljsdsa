@@ -247,9 +247,9 @@
 
 var n = [9, 15, 4, 6, 17, 4, 12, 4, 3, 7];
 
-console.log(n); // [ 9, 15, 4, 6, 17, 4, 12, 4, 3, 7 ]
-console.log(n.indexOf(4)); // 2
-console.log(n.indexOf(8)); // -1, pois nao existe 8 no array
-console.log(n.lastIndexOf(4)); // 7
+// console.log(n); // [ 9, 15, 4, 6, 17, 4, 12, 4, 3, 7 ]
+// console.log(n.indexOf(4)); // 2
+// console.log(n.indexOf(8)); // -1, pois nao existe 8 no array
+// console.log(n.lastIndexOf(4)); // 7
 
-// til pg 103
+console.log(n.join('z')); // 9z15z4z6z17z4z12z4z3z7
