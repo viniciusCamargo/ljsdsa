@@ -73,24 +73,41 @@ var stack = new Stack();
 // //
 
 // /////////////////// Decimal to binary
-// function divideBy2(decNumber) {
+// Converte um numero decimal pra binario
+function divideBy2(decNumber) {
 
-//  var remStack = new Stack(),
-//      rem,
-//      binaryString = '';
+  var remStack = new Stack(), // Cria uma nova stack
+  rem,
+  binaryString = '';
 
-//  while (decNumber > 0) { // {1}
-//    rem = Math.floor(decNumber % 2); // {2}
-//    remStack.push(rem);
-//    decNumber = Math.floor(decNumber / 2); // {4}
-//  }
+  while (decNumber > 0) { // {1}
+    rem = Math.floor(decNumber % 2); // {2}
+    remStack.push(rem);
+    decNumber = Math.floor(decNumber / 2); // {4}
+  }
 
-//  while (!remStack.isEmpty()) { // {5}
-//    binaryString += remStack.pop().toString();
-//  }
+  // Inclui o conteúdo do remStack de trás pra frente
+  // no binaryString
+  while (!remStack.isEmpty()) { // {5}
+    binaryString += remStack.pop().toString();
+  }
 
-//  return binaryString;
+  return binaryString;
 
+}
+// // "(...) while the division result is not zero (line {1}), we 
+// // get the remainder of the division (mod) and push it to the 
+// // stack (lines {2} and {3}), and finally, we update the number
+// // that will be divided by 2 (line {4}). An important observation:
+// // JavaScript has a numeric data type, but it does not distinguish
+// // integers from floating points. For this reason, we need to use
+// // the Math.floor function to obtain only the integer value from
+// // the division operations. And finally, we pop the elements from
+// // the stack until it is empty, concatenating the elements that
+// // were removed from the stack into a string (line {5}).
+
+// for (var i = 0; i < 20; i++) {
+//   console.log(i, divideBy2(i));
 // }
 
-// til pg 116 
+console.log(divideBy2(12)); // 1100
