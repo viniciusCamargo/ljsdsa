@@ -110,4 +110,27 @@ function divideBy2(decNumber) {
 //   console.log(i, divideBy2(i));
 // }
 
-console.log(divideBy2(12)); // 1100
+// console.log(divideBy2(12)); // 1100
+
+function baseConverter(decNumber, base) {
+  var remStack = new Stack(),
+  rem,
+  baseString = '',
+  digits = '0123456789ABCDEF';
+
+  while (decNumber > 0) {
+    rem = Math.floor(decNumber % base);
+    remStack.push(rem);
+    decNumber = Math.floor(decNumber / base);
+  }
+
+  while (!remStack.isEmpty()) {
+    baseString += digits[remStack.pop()];
+  }
+
+  return baseString;
+}
+
+// console.log(baseConverter(15081991, 2)); // 111001100010001000000111
+// console.log(baseConverter(15081991, 8)); // 71421007
+// console.log(baseConverter(15081991, 16)); // E62207
